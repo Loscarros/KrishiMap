@@ -1,0 +1,134 @@
+# ==========================================
+# KrishiMap AI - Root Git Ignore
+# ==========================================
+
+# ------------------------------------------
+# Environment variables / secrets
+# ------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------
+# Node / Next.js - Frontend
+# ------------------------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+frontend/.env
+
+frontend/.turbo/
+frontend/.vercel/
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Next.js generated files
+frontend/next-env.d.ts
+
+# ------------------------------------------
+# Python / FastAPI - Backend
+# ------------------------------------------
+backend/venv/
+backend/.venv/
+backend/.env
+backend/ENV/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+
+backend/__pycache__/
+backend/**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build files
+backend/build/
+backend/dist/
+backend/*.egg-info/
+backend/**/.eggs/
+
+# Test / coverage
+backend/.coverage
+backend/.coverage.*
+backend/htmlcov/
+backend/.tox/
+backend/.nox/
+
+# ------------------------------------------
+# IDE / Editors
+# ------------------------------------------
+.vscode/
+.idea/
+*.iml
+
+# VS Code local history
+.history/
+
+# ------------------------------------------
+# OS generated files
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------
+# Logs
+# ------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------
+# Temporary files
+# ------------------------------------------
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ------------------------------------------
+# Database / local development
+# ------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+
+# PostgreSQL local dumps
+*.dump
+*.sql.gz
+
+# ------------------------------------------
+# Credentials / keys / certificates
+# ------------------------------------------
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# ------------------------------------------
+# Uploads / generated local data
+# ------------------------------------------
+uploads/
+backend/uploads/
+frontend/uploads/
+
+data/
+backend/data/
+
+# ------------------------------------------
+# Coverage / reports
+# ------------------------------------------
+coverage/
+.nyc_output/
+
+# ------------------------------------------
+# Misc
+# ------------------------------------------
+.DS_Store

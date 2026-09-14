@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* =========================================================
+   KrishiMap - Leaflet / Geoman controls
+   ========================================================= */
+
+/* Keep Leaflet controls above map layers */
+.leaflet-control-container {
+  position: relative;
+  z-index: 1000;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 1000 !important;
+}
+
+/* Geoman toolbar */
+.leaflet-control-geoman {
+  margin-top: 12px !important;
+  margin-left: 12px !important;
+
+  position: relative !important;
+  z-index: 10000 !important;
+}
+
+/* Every Geoman button */
+.leaflet-control-geoman button {
+  width: 44px !important;
+  height: 44px !important;
+
+  min-width: 44px !important;
+  min-height: 44px !important;
+
+  margin-bottom: 4px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+
+  overflow: hidden !important;
+
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.10),
+    0 1px 2px rgba(15, 23, 42, 0.05) !important;
+
+  color: #334155 !important;
+
+  cursor: pointer !important;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease !important;
+}
+
+/* Hover */
+.leaflet-control-geoman button:hover {
+  background: #ecfdf5 !important;
+  border-color: #86efac !important;
+  color: #047857 !important;
+}
+
+/* Active */
+.leaflet-control-geoman button:active {
+  background: #d1fae5 !important;
+  transform: scale(0.96) !important;
+}
+
+/* Prevent Geoman text from overflowing */
+.leaflet-control-geoman button span,
+.leaflet-control-geoman button div {
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  overflow: hidden !important;
+
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Geoman icons */
+.leaflet-control-geoman button[class*="icon"] {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Make sure the toolbar itself isn't clipped */
+.leaflet-control-geoman {
+  overflow: visible !important;
+}
+
+/* Map should stay underneath controls */
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+/* Don't let map panes cover controls */
+.leaflet-pane {
+  z-index: auto;
+}
+
+.leaflet-map-pane {
+  z-index: 1 !important;
+}
+
+.leaflet-overlay-pane {
+  z-index: 400 !important;
+}
+
+.leaflet-marker-pane {
+  z-index: 600 !important;
+}
+
+.leaflet-tooltip-pane {
+  z-index: 650 !important;
+}
+
+.leaflet-popup-pane {
+  z-index: 700 !important;
+}
