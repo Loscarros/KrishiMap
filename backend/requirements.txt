@@ -1,11 +1,60 @@
+# fastapi
+# uvicorn[standard]
+# sqlalchemy
+# psycopg2-binary
+# python-dotenv
+# python-multipart
+# email-validator
+# PyJWT
+# pwdlib[argon2]
+# httpx
+# groq
+
+# ============================================================
+# WEB API
+# ============================================================
+
 fastapi
 uvicorn[standard]
+
+
+# ============================================================
+# DATABASE
+# ============================================================
+
 sqlalchemy
 psycopg2-binary
+alembic
+
+
+# ============================================================
+# CONFIGURATION
+# ============================================================
+
 python-dotenv
-python-multipart
-email-validator
+
+
+# ============================================================
+# AUTHENTICATION & SECURITY
+# ============================================================
+
 PyJWT
 pwdlib[argon2]
+
+
+# ============================================================
+# REQUEST / FORM HANDLING
+# ============================================================
+
 httpx
+python-multipart
+email-validator
+
+
+# ============================================================
+# AI / LANGCHAIN
+# ============================================================
+
+langchain-core
+langchain-groq
 groq
